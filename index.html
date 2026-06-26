@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Nature & Wildlife Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<h1>Nature & Wildlife Gallery</h1>
+
+<p style="text-align:center;color:#cbd5e1;margin-bottom:30px;">
+Responsive Image Gallery built using HTML, CSS and JavaScript 
+</p>
+
+<div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('animals')">Animals</button>
+</div>
+
+<div class="gallery">
+
+    <img src="https://picsum.photos/id/1015/400/300" class="nature" alt="Nature Image">
+
+    <img src="https://picsum.photos/id/1025/400/300" class="animals" alt="Animal Image">
+
+    <img src="https://picsum.photos/id/1035/400/300" class="nature" alt="Nature Image">
+
+    <img src="https://picsum.photos/id/1045/400/300" class="animals" alt="Animal Image">
+
+    <img src="https://picsum.photos/id/1055/400/300" class="nature" alt="Nature Image">
+
+    <img src="https://picsum.photos/id/1065/400/300" class="animals" alt="Animal Image">
+
+    <img src="https://picsum.photos/id/1074/400/300" class="nature" alt="Nature Image">
+
+    <img src="https://picsum.photos/id/1084/400/300" class="animals" alt="Animal Image">
+
+    <img src="https://picsum.photos/id/1043/400/300" class="nature" alt="Nature Image">
+
+    <img src="https://picsum.photos/id/237/400/300" class="animals" alt="Animal Image">
+
+</div>
+
+<div class="lightbox" id="lightbox">
+
+    <span class="close">&times;</span>
+
+    <button class="prev">❮</button>
+
+    <img id="lightbox-img" alt="Preview Image">
+
+    <button class="next">❯</button>
+
+</div>
+
+<footer style="text-align:center;margin-top:50px;color:#94a3b8;padding:20px;">
+    © 2026 CodeAlpha Internship Project | Image Gallery by Tejas Jain
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

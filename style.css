@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
+    color:white;
+    padding:30px;
+}
+
+/* Heading */
+
+h1{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:30px;
+    background:linear-gradient(90deg,#38bdf8,#8b5cf6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Filter Buttons */
+
+.filters{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.filters button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:rgba(255,255,255,0.08);
+    color:white;
+    backdrop-filter:blur(10px);
+    transition:0.3s ease;
+    font-size:15px;
+}
+
+.filters button:hover{
+    transform:translateY(-3px);
+    background:#38bdf8;
+    color:#000;
+}
+
+/* Gallery */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1300px;
+    margin:auto;
+}
+
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(56,189,248,0.3);
+}
+
+/* Lightbox */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.95);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.lightbox img{
+    max-width:85%;
+    max-height:80%;
+    border-radius:20px;
+    box-shadow:0 0 40px rgba(255,255,255,0.15);
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:35px;
+    font-size:50px;
+    cursor:pointer;
+    color:white;
+}
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    border:none;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:24px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    backdrop-filter:blur(10px);
+    transition:.3s;
+}
+
+.prev:hover,
+.next:hover{
+    background:#38bdf8;
+    color:black;
+}
+
+.prev{
+    left:30px;
+}
+
+.next{
+    right:30px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    .gallery img{
+        height:220px;
+    }
+
+    .prev,
+    .next{
+        width:45px;
+        height:45px;
+    }
+}
